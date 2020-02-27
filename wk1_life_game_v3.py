@@ -1,0 +1,1 @@
+# Improve the life_game_v2.py here by using coordinates
