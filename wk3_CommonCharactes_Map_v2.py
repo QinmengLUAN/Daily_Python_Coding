@@ -1,4 +1,5 @@
 # Leetcode 1002. Find Common Characters
+# Medium
 """
 Given an array A of strings made only from lowercase letters, 
 return a list of all characters that show up in all strings 
@@ -43,26 +44,9 @@ class Solution:
         	num = dic_list.get(k)
         	for i in range(num):
         		result.append(k)
-
         return result
 
-'''
-        for i in range(1,length):
-        	str_list = list(A[i])
-        	for k in range(0,len(str_list)):
-        		if str_list[j] not in dic_str.keys():
-        			dic_str.pop(str_list[j])
-        		else:
-        			dic_str.pop(str_list[j])
 
-
-        			new_index = dic_str[0].get(str_list[j]) + 1
-        		new_key = str_list[j]
-        		dic_str[0].update({new_key: new_index})
-
-        		  		
-        return dic_str
-'''
 s = Solution()
 inp = ["cooll","loockl","cookl"]
 print(s.commonChars(inp))

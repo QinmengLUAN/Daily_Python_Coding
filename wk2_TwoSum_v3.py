@@ -15,7 +15,7 @@ def TwoSum(inp, target):
 	j = len(inp) - 1
 	i = 0
 	while i != j:
-		current = new_inp[si][0] + new_inp[j][0]
+		current = new_inp[i][0] + new_inp[j][0]
 		if current == target:
 			return [new_inp[i][1],new_inp[j][1]]
 		elif current > target:
