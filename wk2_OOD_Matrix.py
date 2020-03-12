@@ -44,7 +44,7 @@ class Matrix:
 
 
 
-m = Matrix(4ß)
+m = Matrix(4)
 #res = m.set(1,2,3)
 m.print()
 m.set(1,2,3)
