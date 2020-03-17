@@ -34,7 +34,7 @@ def MeetingRoom(MeetingRoom):
 	j = 1 # Current
 	while j < len(meeting_list):
 
-		while i < j:
+		while i < j and j < len(meeting_list):
 			if meeting_list[j].start < meeting_list[i].finish:
 				conflict += 1
 				max_conflict = max(max_conflict, conflict)
@@ -51,7 +51,7 @@ def MeetingRoom(MeetingRoom):
 	return room
 
 
-meeting_list = [MeetingTime(1, 2), MeetingTime(1, 6), MeetingTime(3, 4), MeetingTime(8, 1)]
+meeting_list = [MeetingTime(1, 2), MeetingTime(1, 6), MeetingTime(3, 4), MeetingTime(3, 9)]
 
 print(AttendAll(meeting_list))
 
