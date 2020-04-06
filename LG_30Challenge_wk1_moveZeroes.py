@@ -27,7 +27,7 @@ class Solution:
 					nums[i] = nums[j]
 					nums[j] = 0
 		return nums
-
+		
 n = [0,1,0,3,12]
 s = Solution()
 print(s.moveZeroes(n))
