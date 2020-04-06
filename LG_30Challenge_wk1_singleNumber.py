@@ -1,7 +1,7 @@
 """
 30 days Leetcode Challenge
 wk1: singleNumber, need tricks	
-
+Leetcode136 hash table
 Given a non-empty array of integers, every element appears twice except for one. 
 Find that single one.
 
