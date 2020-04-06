@@ -1,6 +1,7 @@
 """
 30 days Leetcode Challenge
 wk1: maxSubArray: seems easy, but hard! Remember this.
+Leetcode53
     Key Points:
         Let's consider a simpler example: [a, b, c]. It has many sub arraries: [a],
         [a, b], [a, b, c], [b, c], etc. Let's assume a < 0, then it's obvious the
