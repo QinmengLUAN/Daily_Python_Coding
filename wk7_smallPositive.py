@@ -17,13 +17,17 @@ N is an integer within the range [1..100,000];
 each element of array A is an integer within the range [−1,000,000..1,000,000].
 """
 def solution(A):
-    # write your code in Python 3.6
     A.sort()
-    A_set = set(A)
     res = 1
-    for item in A_set:
-        if res == item:
+    i = 0
+    while i < len(A):
+        while i < len(A) - 1 and A[i] == A[i + 1]:
+            i += 1
+        if res == A[i]:
             res += 1
+            i += 1
         else:
-            return res
+            break
     return res
+
+print(solution([1, 3, 3, 3, 6, 4, 1, 2]))
