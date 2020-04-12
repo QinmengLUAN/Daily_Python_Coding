@@ -1,5 +1,6 @@
 # Daily_Python_Coding
 ### 30-Day LeetCoding Challenge
+* Various topics, Leetcode easy
 * https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
 ### wk1: List
 ### wk2: Advanced list & OOD
