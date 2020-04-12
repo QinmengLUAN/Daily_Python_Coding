@@ -6,6 +6,8 @@
 ### wk2: Advanced list & OOD
 ### wk3: OOD & set & map
 ### wk4: Leetcode easy
-### wk5: Pandas & Binary Tree
-### wk6: Linear regression & Logistic regression
-### wk7: Neural networks
+### wk5: Pandas I & Binary Tree
+### wk6: Backtracking
+### wk7: Linked list
+### wk8: Pandas II: Linear regression & Logistic regression
+### wk9: Pandas III: Neural networks
