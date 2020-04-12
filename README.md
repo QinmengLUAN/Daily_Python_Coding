@@ -1,9 +1,7 @@
 # Daily_Python_Coding
 ### 30-Day LeetCoding Challenge
-* Various topics, Leetcode easy
-** https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
-* Pass-by-object-reference
-** https://www.python-course.eu/passing_arguments.php
+* Various topics, Leetcode easy: https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
+* Pass-by-object-reference: https://www.python-course.eu/passing_arguments.php
 ### wk1: List
 ### wk2: Advanced list & OOD
 ### wk3: OOD & set & map
