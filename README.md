@@ -9,5 +9,8 @@
 ### wk5: Pandas I & Binary Tree
 ### wk6: Backtracking
 ### wk7: Linked list
-### wk8: Pandas II: Linear regression & Logistic regression
+### wk8: Array101 & Pandas II
+* Array101 Leetcode Explore: Introduction to data structure
+** https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/
+* Pandas II: Linear regression & Logistic regression
 ### wk9: Pandas III: Neural networks
