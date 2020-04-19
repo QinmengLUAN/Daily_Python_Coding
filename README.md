@@ -7,6 +7,8 @@
 ### wk3: OOD & set & map
 ### wk4: Leetcode easy
 ### wk5: Pandas I & Binary Tree
+* Pandas Jupyter Notebook Beginner
+  * https://github.com/QinmengLUAN/Pandas_practice/tree/master/Pandas_Beginner
 ### wk6: Backtracking
 ### wk7: Linked list
 ### wk8: Array101 & Pandas II
