@@ -12,5 +12,6 @@
 ### wk8: Array101 & Pandas II
 * Array101 Leetcode Explore: Introduction to data structure
   * https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/
-* Pandas II: Linear regression & Logistic regression
+* Pandas II: titanic prediction 
+  * https://github.com/QinmengLUAN/Pandas_practice/tree/master/Titanic_ML
 ### wk9: Pandas III: Neural networks
