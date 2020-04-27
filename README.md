@@ -16,4 +16,11 @@
   * https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/
 * Pandas II: titanic prediction 
   * https://github.com/QinmengLUAN/Pandas_practice/tree/master/Titanic_ML
-### wk9: Pandas III: Neural networks
+### wk9: Queue & Stack & Pandas III
+* Queue & Stack Leetcode Explore: Introduction to Data Structure
+  * https://leetcode.com/explore/learn/card/queue-stack/
+* Binary Tree Leetcode Explore: Introduction to Data Structure
+  * https://leetcode.com/explore/learn/card/data-structure-tree/
+* Recursion I Leetcode Explore: Introduction to Algorithms
+  * https://leetcode.com/explore/featured/card/recursion-i/
+* Neural networks
