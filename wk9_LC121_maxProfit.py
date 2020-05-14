@@ -22,21 +22,36 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 class Solution:
     def maxProfit(self, prices):
         profit = 0
-        if len(prices) == 0:
-            return profit
-        pre_low_price = prices[0]
+
+        if len(prices) > 0:
+            pre_low_price = prices[0]
+
         for i in range(1,len(prices)):
             if prices[i] > pre_low_price:
                 profit = max(prices[i] - pre_low_price, profit)
             else:
                 pre_low_price = prices[i]
-        return profit 
+        return profit
+
+        profit = 0
+
 
 prices = [7,1,5,3,6,4]
 prices = [7,6,4,3,1]
 prices = []
 s = Solution()
 print(s.maxProfit(prices))
-        
+
+"""
+# If allow multiple transactions:
+        profit = 0
+        if len(prices) > 0:
+            previous_price = prices[0]
+        for i in range(len(prices)):
+            if prices[i] > previous_price:
+                profit += (prices[i] - previous_price)
+            previous_price = prices[i]
+        return profit 
+"""      
         
         
