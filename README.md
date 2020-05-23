@@ -1,4 +1,5 @@
 # Daily_Python_Coding
+> A useful gitbook from web about [LC explanations](https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/1_leetcode_java_two_sum__medium.html)
 ### 30-Day LeetCoding Challenge
 * Various topics, Leetcode easy: https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
 * Pass-by-object-reference: https://www.python-course.eu/passing_arguments.php
