@@ -24,4 +24,6 @@
   * https://leetcode.com/explore/learn/card/data-structure-tree/
 * Recursion I Leetcode Explore: Introduction to Algorithms
   * https://leetcode.com/explore/featured/card/recursion-i/
+### wk10: Hash table & Neural Network
+* [Hash table Leetcode](https://leetcode.com/explore/learn/card/hash-table/) [Question list](https://blog.csdn.net/pushup8/article/details/85341207)
 * Neural networks
