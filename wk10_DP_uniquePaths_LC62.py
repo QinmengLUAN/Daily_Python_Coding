@@ -1,6 +1,6 @@
 """
 62. Unique Paths
-Medium: DP
+Medium: DP, time complexity O(m*n), space complexity O(m*n)
 
 A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
 
