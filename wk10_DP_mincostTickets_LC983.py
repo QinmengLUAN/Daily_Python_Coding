@@ -35,8 +35,9 @@ On day 1, you bought a 30-day pass for costs[2] = $15 which covered days 1, 2, .
 On day 31, you bought a 1-day pass for costs[0] = $2 which covered day 31.
 In total you spent $17 and covered all the days of your travel.
 """
+# Method 1: Recursion + Cache
 class Solution:
-    def mincostTickets(self, days, costs):
+    def mincostTickets_2(self, days, costs):
         return self.helper(days, costs, 0, {})
 
     def helper(self, days, costs, i, cache):
@@ -60,6 +61,22 @@ class Solution:
             res = min(cost_day, cost_wk, cost_month)
             cache[i] = res
         return res
+
+# Method 2: DP_Table filling
+class Solution:
+    def mincostTickets(self, days, costs):
+        table = [0] * 400
+        dayset = set(days)
+        for i in range(398, -1, -1):
+            if i in dayset:
+                costs_day = costs[0] + table[i + 1]
+                costs_wk = costs[1] + table[i + 7]
+                costs_month = costs[2] + table[i +30]
+                table[i] = min(costs_day, costs_wk, costs_month)
+            else:
+                table[i] = table[i + 1]
+        print(table)
+        return table[0]
 
 
 days = [1,2,3,4,5,6,7,8,9,10,30,31]
