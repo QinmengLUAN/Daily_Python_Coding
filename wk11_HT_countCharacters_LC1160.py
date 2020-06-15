@@ -7,8 +7,6 @@ A string is good if it can be formed by characters from chars (each character ca
 
 Return the sum of lengths of all good strings in words.
 
- 
-
 Example 1:
 
 Input: words = ["cat","bt","hat","tree"], chars = "atach"
