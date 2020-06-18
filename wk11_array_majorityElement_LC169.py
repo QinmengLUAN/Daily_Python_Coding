@@ -35,7 +35,7 @@ class Solution:
                 
             if nums_dic[item] > (len(nums) // 2):
                 return item 
-# Sotring O(log n)
+# Sotring O(n log n)
 # Since you know that the majority element is the element that appears MORE THAN n/2 times, meaning that if you sort the input, then the median number is guaranteed to be the majority element.
 # Ex: [1, 4, 3, 1, 1, 5, 1, 1] here (N=8)/2 is 4 meaning that there must be 5 of the majority element. Sorted this is [1, 1, 1, 1, 1, 3, 4, 5]. Where 1 is the majority element.
     def majorityElement(self, nums):
