@@ -1,5 +1,8 @@
 # Daily_Python_Coding
-> A useful gitbook from web about [LC explanations](https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/1_leetcode_java_two_sum__medium.html)
+
+## Usful courses and docs
+* Coursera [Data Structures and Algorithms Specialization](https://www.coursera.org/specializations/data-structures-algorithms)
+* A useful gitbook from web about [LC explanations](https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/1_leetcode_java_two_sum__medium.html)
 
 ### 30-Day LeetCoding Challenge
 * Various topics, Leetcode easy: https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
