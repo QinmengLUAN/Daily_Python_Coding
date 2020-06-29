@@ -53,3 +53,24 @@ class Solution:
 nums = [4,1,1,4]
 s = Solution()
 print(s.rob(nums))
+
+# Solution 2: recursion
+class Solution:
+    def rob(self, nums):
+        if len(nums) == 0:
+            return 0
+        elif len(nums) <= 2:
+            return max(nums)
+        return self.helper(nums, len(nums) - 1, {})
+        
+    def helper(self, nums, i, cache):
+        if i == 0:
+            cache[0] = nums[0]
+            return cache[0]
+        if i == 1:
+            cache[1] = max(nums[0], nums[1])
+            return cache[1]
+        if i in cache:
+            return cache[i]
+        cache[i] = max(nums[i] + self.helper(nums, i - 2, cache), self.helper(nums, i - 1, cache))
+        return cache[i]
