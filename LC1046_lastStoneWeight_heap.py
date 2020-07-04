@@ -19,18 +19,17 @@ we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
 we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of last stone.
 """
 class Solution:
-    def lastStoneWeight(self, stones: List[int]) -> int:  
-        stones = list(map(lambda item: item * -1, stones))
-        from heapq import heappop, heappush, heapify 
-        heapify(stones)
-        while len(stones) > 1:
-            most_heavy_stone = heapq.heappop(stones)
-            second_heavy_stone = heapq.heappop(stones)       
-            new_stone = most_heavy_stone - second_heavy_stone
-            if new_stone < 0:
-                heapq.heappush(stones, new_stone)
-            # print(stones)
-        if len(stones) == 0:
-            return 0
-        else:
-            return heapq.heappop(stones) * (-1)
+    def lastStoneWeight(self, stones: List[int]) -> int:
+        # heap only can pop minimum number, thus used a trick to solve this:
+        # -1 * each_val --> heappop -max_val each time
+        ## Alternative way to generate nums
+        # nums = list(map(lambda item: item * -1, stones))      
+        nums = [-1 * stones[i] for i in range(len(stones))]
+        heapq.heapify(nums)
+        while len(nums) > 1:
+            nums_1 = heapq.heappop(nums)
+            nums_2 = heapq.heappop(nums)
+            new_num = nums_1 - nums_2
+            if new_num < 0:
+                heapq.heappush(nums, new_num)
+        return -1 * heapq.heappop(nums) if len(nums) > 0 else 0
