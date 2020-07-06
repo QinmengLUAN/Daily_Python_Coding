@@ -27,6 +27,21 @@ Output: [[2,3],[1,4],[1,6],[3,7],[4,3],[5,4],[4,5]]
 Check 8 directions around the King.
 Find the nearest queen in each direction.
 """
+"""
+Explanation
+Start from the position of king,
+we try to find a queen in 8 directions.
+I didn't bother skipping the case where (i,j) = (0,0)
+
+
+Complexity
+Time O(1), Space O(1)
+as the size of chessboard is limited.
+
+For the chessboard of N * N
+Time O(queens + 8N)
+Space O(queens)
+"""
 class Solution:
     # BFS1
     def queensAttacktheKing1(self, queens: List[List[int]], king: List[int]) -> List[List[int]]:        
