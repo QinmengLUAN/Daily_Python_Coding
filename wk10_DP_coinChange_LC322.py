@@ -19,6 +19,7 @@ You may assume that you have an infinite number of each kind of coin.
 """
 # Transition function f(n) = min(f(n - 1), f(n - 2), f(n - 5)) + 1
 class Solution:
+    # Table Filling
     def coinChange(self, coins, amount):
         res = {}
         res[0] = 0
@@ -34,7 +35,26 @@ class Solution:
             return res[amount]
         else:
             return -1
-
+    
+    # Recursion
+    def coinChange1(self, coins: List[int], amount: int) -> int:
+        cache = {0:0}
+        for i in range(len(coins)):
+            cache[coins[i]] = 1
+        res = self.helper(coins, amount, cache, amount + 1)
+        # print(cache)
+        return res if res < amount + 1 else -1
+    
+    def helper(self, coins, amount, cache, max_amount):
+        if amount in cache:
+            return cache[amount]
+        if amount < 0:
+            return max_amount
+        cache[amount] = max_amount
+        for i in range(len(coins)):
+            cache[amount] = min(cache[amount], self.helper(coins, amount - coins[i], cache, max_amount) + 1)
+        return cache[amount]
+  
 s = Solution()
 coins = [2]
 amount = 3
