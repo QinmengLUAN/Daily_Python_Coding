@@ -1,6 +1,6 @@
 """
 207. Course Schedule
-Medium
+Medium: Graph
 
 There are a total of numCourses courses you have to take, labeled from 0 to numCourses-1.
 
