@@ -37,7 +37,7 @@ Then (a-d)-(b-c) is the same as a-d-b+c, which is the same as -d-b+a+c, which is
 Then you can see that depending on the order of the subtractions, we get a different setting of difference between two groups.
 """
 class Solution:
-    def (self, stones: List[int]) -> int:
+    def lastStoneWeightII(self, stones: List[int]) -> int:
         half_limit = sum(stones) // 2
         f = [0] * (half_limit + 1) 
 
