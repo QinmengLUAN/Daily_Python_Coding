@@ -16,6 +16,16 @@ A solution set is:
   [-1, -1, 2]
 ]
 """
+# Solution
+# For time complexity
+# Sorting takes O(NlogN)
+# Now, we need to think as if the nums is really really big
+# We iterate through the nums once, and each time we iterate the whole array again by a while loop
+# So it is O(NlogN+N^2)~=O(N^2)
+
+# For space complexity
+# We didn't use extra space except the res
+# So it is O(1).
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
