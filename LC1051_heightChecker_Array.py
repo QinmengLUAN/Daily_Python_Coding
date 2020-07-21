@@ -28,15 +28,12 @@ Output: 0
 """
 class Solution:
     def heightChecker(self, heights):
-        new_heights = heights.copy()
-        new_heights.sort()
-        changed_position = 0
-        
+        sorted_heights = sorted(heights.copy())
+        res = 0
         for i in range(len(heights)):
-            if heights[i] != new_heights[i]:
-                changed_position += 1
-            i += 1
-        return changed_position
+            if sorted_heights[i] != heights[i]:
+                res += 1
+        return res
 
 inp = [1,2,3,4,5]
 s = Solution()
