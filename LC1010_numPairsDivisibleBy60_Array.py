@@ -28,5 +28,6 @@ class Solution:
         res = 0
         for t in time:
             res += c[- t % 60]
+            # Or: res += c[(60 - t%60)%60]  
             c[t % 60] += 1        
         return res
