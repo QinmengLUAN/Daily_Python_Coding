@@ -7,4 +7,6 @@
 [Maximum Substring](https://leetcode.com/problems/last-substring-in-lexicographical-order/discuss/361121/Python-O(n)-with-explanation)
 [Link to question](https://leetcode.com/discuss/interview-question/724612/Goldman-Sachs-or-New-Grad-or-OA-2021)
 
+[Unique-binary-search-trees-ii](https://leetcode.com/problems/unique-binary-search-trees-ii/discuss/31592/Recursive-python-solution)
+
 [Matrix Game](https://gist.github.com/pallavi-srikhakollu/8bdea9f529dce39181b966aef27b578f)
