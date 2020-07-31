@@ -4,7 +4,7 @@
 * Coursera [Data Structures and Algorithms Specialization](https://www.coursera.org/specializations/data-structures-algorithms)
 * A useful gitbook from web about [LC explanations](https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/1_leetcode_java_two_sum__medium.html)
 
-### LeetCode Topics
+## LeetCode Topics
 * [Array101 Leetcode Explore: Introduction to data structure](https://leetcode.com/explore/featured/card/fun-with-arrays/521/introduction/)
 * [Queue & Stack Leetcode Explore: Introduction to Data Structure](https://leetcode.com/explore/learn/card/queue-stack/)
 * [Binary Tree Leetcode Explore: Introduction to Data Structure](https://leetcode.com/explore/learn/card/data-structure-tree/)
@@ -13,7 +13,7 @@
 * Various topics, Leetcode easy: https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
 * Pass-by-object-reference: https://www.python-course.eu/passing_arguments.php
 
-### Question Topics
+## Question Topics
 * List
 * Advanced list & OOD
 * set & map
