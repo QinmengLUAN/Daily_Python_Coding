@@ -10,8 +10,8 @@
 * [Binary Tree Leetcode Explore: Introduction to Data Structure](https://leetcode.com/explore/learn/card/data-structure-tree/)
 * [Recursion I Leetcode Explore: Introduction to Algorithms](https://leetcode.com/explore/featured/card/recursion-i/)
 * [Hash table Leetcode](https://leetcode.com/explore/learn/card/hash-table/) [Question list](https://blog.csdn.net/pushup8/article/details/85341207)
-* Various topics, Leetcode easy: https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/
-* Pass-by-object-reference: https://www.python-course.eu/passing_arguments.php
+* [Various topics, Leetcode easy](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
+* [Pass-by-object-reference](https://www.python-course.eu/passing_arguments.php)
 
 ## Question Topics
 * List
