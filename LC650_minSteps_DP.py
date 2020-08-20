@@ -20,6 +20,17 @@ In step 2, we use Paste operation to get 'AA'.
 In step 3, we use Paste operation to get 'AAA'.
 """
 class Solution:
+    def minSteps(self, n: int) -> int:
+        res = list(range(n+1))
+        res[1] = 0
+        for i in range(2, n + 1):
+            for j in range(1, i):
+                if i % j == 0:
+                    res[i] = min(res[j] + i // j, res[i])
+        # print(res)
+        return res[-1]
+        
+class Solution:
     def minSteps_1(self, n: int) -> int:
         min_steps = {}
         min_steps[1] = 0
