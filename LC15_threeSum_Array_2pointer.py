@@ -26,6 +26,26 @@ A solution set is:
 # For space complexity
 # We didn't use extra space except the res
 # So it is O(1).
+
+# 2Sum method:
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        if len(nums) < 3:
+            return []
+        res = set()
+        nums.sort()
+        for i in range(len(nums)-2):
+            if i >= 1 and nums[i] == nums[i-1]:
+                continue
+            target = - nums[i]
+            dic = {}
+            for j in range(i+1, len(nums)):
+                if nums[j] in dic:
+                    res.add((nums[i], - nums[i] - nums[j], nums[j]))
+                else:
+                    dic[target - nums[j]] = nums[j]
+        return map(list, res)
+# 2 Pointer method:
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
