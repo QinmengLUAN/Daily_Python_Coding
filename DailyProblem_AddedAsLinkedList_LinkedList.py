@@ -23,29 +23,20 @@ class Solution:
     node = dummy
     tmp = 0
     while l1 or l2:
-        node.next = ListNode(0)
-        node = node.next
-        if l1 and l2:
-            value = (tmp + l1.val + l2.val) % 10
-            tmp = (tmp + l1.val + l2.val) // 10
-            node.val = value
+        l1val, l2val = 0, 0
+        if l1:
+            l1val = l1.val
             l1 = l1.next
+        if l2:
+            l2val = l2.val
             l2 = l2.next
-        elif l1:
-            value = (tmp + l1.val) % 10
-            tmp = (tmp + l1.val) // 10
-            node.val = value
-            l1 = l1.next           
-        elif l2:
-            value = (tmp + l2.val) % 10
-            tmp = (tmp + l2.val) // 10
-            node.val = value
-            l2 = l2.next 
+        value = (tmp + l1val + l2val) % 10
+        tmp = (tmp + l1val + l2val) // 10
+        node.next = ListNode(value)
+        node = node.next
     
     if tmp != 0:
-        node.next = ListNode(0)
-        node = node.next
-        node.val = tmp
+        node.next = ListNode(tmp)
     return dummy.next
 ########################################
 l1 = ListNode(2)
