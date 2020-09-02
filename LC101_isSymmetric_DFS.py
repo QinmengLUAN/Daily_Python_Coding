@@ -30,15 +30,20 @@ Bonus points if you could solve it both recursively and iteratively.
 #         self.left = None
 #         self.right = None
 
+# Time complexity: O(N)
+# Space complexity: O(log(N))
 class Solution:
-    def isSymmetric(self, root: TreeNode) -> bool:
+    def isSymmetric_dfs(self, root: TreeNode) -> bool:
         if root == None:
             return True
-        return self.isS_Tree(root.left, root.right)
-    
-    def isS_Tree(self, p: TreeNode, q: TreeNode) -> bool:
-        if p != None and q != None:
-            return p.val == q.val and self.isS_Tree(p.left, q.right) and self.isS_Tree(p.right, q.left)
-        else:
-            return p == None and q == None
+        return self.dfs(root.left, root.right)
+        
+    def dfs(self, nl, nr):
+        if nl == nr == None:
+            return True
+        elif nl == None or nr == None:
+            return False
+        elif nl.val != nr.val:
+            return False
+        return self.dfs(nl.left, nr.right) and self.dfs(nl.right, nr.left)
         
