@@ -23,6 +23,15 @@ Output:
 
 The longest substring is "ababb", as 'a' is repeated 2 times and 'b' is repeated 3 times.
 """
+"""
+Solution:
+If every character appears at least k times, the whole string is ok. 
+Otherwise split by a least frequent character (because it will always be too infrequent 
+and thus can't be part of any ok substring) and make the most out of the splits.
+
+As usual for Python here, the runtime varies a lot, 
+this got accepted in times from 32 ms to 74 ms.
+"""
 class Solution:
     def longestSubstring(self, s: str, k: int) -> int:
         if len(s) < k:
