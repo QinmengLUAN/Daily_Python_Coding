@@ -21,17 +21,13 @@ Could you implement both?
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode: 
-        if head == None or head.next == None:
-            return head                        
-        return self.helper(head, temp = None)
-    
-    def helper(self, cur_node, temp):
-            if cur_node == None:
-                return temp
-            
-            next_node = cur_node.next
-            cur_node.next = temp
-            
-            return self.helper(next_node, cur_node)
+        return self._reverse(head, None)
+
+    def _reverse(self, node, pre):
+        if node == None:
+            return pre
+        tmp = node.next
+        node.next = pre
+        return self._reverse(tmp, node)
 
 
