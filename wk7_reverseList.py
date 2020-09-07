@@ -20,16 +20,10 @@ Could you implement both?
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode: 
-        if head == None or head.next == None:
-            return head
-        
-        curr = head 
-        curr_next = head.next
-        curr.next = None
-
-        while curr_next != None:
-            tem = curr_next.next
-            curr_next.next = curr
-            curr = curr_next
-            curr_next = tem
-        return curr
+        pre = None
+        while head:
+            tmp = head.next
+            head.next = pre
+            pre = head
+            head = tmp
+        return pre
