@@ -14,6 +14,24 @@ print sortNums([3, 3, 2, 1, 3, 2, 1])
 """
 def sortNums(nums):
 # Fill this in.
+    i, k, j = 0, 0, len(nums)-1
+    while k <= j:
+        if nums[k] == 1 and k != i:
+            tmp = nums[i]
+            nums[i] = nums[k]
+            nums[k] = tmp
+            i += 1
+        elif nums[k] == 3:
+            tmp = nums[j]
+            nums[j] = nums[k]
+            nums[k] = tmp
+            j -= 1
+        else:
+            k += 1
+        # print(nums, i, j, k)
+    return nums
+def sortNums1(nums):
+# Fill this in.
     i, j, k = 0, 0, 0
     for n in nums:
         if n == 1:
@@ -33,3 +51,7 @@ def sortNums(nums):
 
 print(sortNums([3, 3, 2, 1, 3, 2, 1]))
 # [1, 1, 2, 2, 3, 3, 3]
+
+print(sortNums([3, 1, 2, 1, 3, 2, 1]))
+print(sortNums([3, 2, 2, 1, 3, 3, 1]))
+print(sortNums([2, 3, 1]))
