@@ -1,6 +1,21 @@
 class LinkedList:
     def __init__(self):
         self.dummy = Node(None)
+        self.length = 0
+    def __len__(self):
+        return self.length
+    def __iter__(self):
+        n = self.dummy.next
+        while n:
+            yield n.val
+            n = n.next
+
+    hello_val = 1
+
+    @staticmethod
+    def hello():
+        print("Hello: ", LinkedList.hello_val)
+
     def print(self):
         n_node = self.dummy.next
         while n_node:
@@ -13,15 +28,17 @@ class LinkedList:
             n_node = n_node.next
         node = Node(val)
         n_node.next = node
+        self.length += 1
 
     def clear(self):
         self.dummy.next = None
+        self.length = 0 
 
     def copy(self):
         nl = LinkedList()
         n = self.dummy.next
         while n:
-            nl.next = n
+            nl.append(n)
             n = n.next
         return nl
 
@@ -53,6 +70,7 @@ class LinkedList:
         if pos == 0:
             node.next = self.dummy.next
             self.dummy.next = node
+            self.length += 1
             return
 
         n = self.dummy.next
@@ -61,11 +79,13 @@ class LinkedList:
             if idx == pos:
                 node.next = n.next
                 n.next = node
+                self.length += 1
                 return
             idx += 1
             n = n.next
         if pos == idx:
             n.next = node
+            self.length += 1
             return
 
     def pop(self, pos):
@@ -73,11 +93,13 @@ class LinkedList:
         if pos == 0:
             if n.next:
                 self.dummy.next = n.next
+                self.length -= 1
             return
         idx = 1
         while n.next:
             if idx == pos:
                 n.next = n.next.next
+                self.length -= 1
                 return
             idx += 1
             n = n.next
@@ -88,6 +110,7 @@ class LinkedList:
         while h.next:
             if h.next.val == val:
                 h.next = h.next.next
+                self.length -= 1
             else:
                 h = h.next
 
