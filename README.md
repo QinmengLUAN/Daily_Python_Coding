@@ -4,6 +4,7 @@
 * Labuladong's summary of algorithms: [Gitbook](https://labuladong.gitbook.io/algo/)
 * Coursera [Data Structures and Algorithms Specialization](https://www.coursera.org/specializations/data-structures-algorithms)
 * A useful gitbook from web about [LC explanations](https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/1_leetcode_java_two_sum__medium.html)
+* [UC Berkeley Data Structure](https://inst.eecs.berkeley.edu/~cs61b/sp20/)
 
 ## Question Topics
 * List
