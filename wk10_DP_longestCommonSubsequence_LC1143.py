@@ -1,6 +1,6 @@
 """
 1143. Longest Common Subsequence
-Medium: DP, Recursion, time complexity N(MN), space complexity N(MN)
+Medium: DP, table filling, recursion, time complexity N(MN), space complexity N(MN)
 
 Given two strings text1 and text2, return the length of their longest common subsequence.
 
@@ -24,6 +24,25 @@ Input: text1 = "abc", text2 = "def"
 Output: 0
 Explanation: There is no such common subsequence, so the result is 0.
 """
+# Solution 1: DP, table filling, time/space complexity O(M*N)
+class Solution:
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        if not text1 and not text2:
+            return 0
+        
+        n, m = len(text1), len(text2)
+        # state and initiation
+        dp = [[0] * (m + 1) for i in range(n + 1)]
+        
+        # table filling, function
+        for i in range(1, n + 1):
+            for j in range(1, m + 1):
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+                if text1[i-1] == text2[j-1]:
+                    dp[i][j] = max(dp[i][j], dp[i-1][j-1] + 1)
+        return dp[n][m]
+
+# Solution 2: DP, recursion + cache, time/space complexity N(MN)
 class Solution:
     def longestCommonSubsequence(self, text1, text2):
         return self.helper(text1, text2, 0, 0, {})
