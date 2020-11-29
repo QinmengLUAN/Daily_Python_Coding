@@ -25,3 +25,4 @@
 * [Hash table Leetcode](https://leetcode.com/explore/learn/card/hash-table/) [Question list](https://blog.csdn.net/pushup8/article/details/85341207)
 * [Various topics, Leetcode easy](https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/)
 * [Pass-by-object-reference](https://www.python-course.eu/passing_arguments.php)
+* “人可一日无食，但不可一日无书。一日无书，百事荒芜。” --》萌不可一日不coding
