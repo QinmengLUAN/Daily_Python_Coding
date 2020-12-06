@@ -18,10 +18,14 @@ print(Solution().topKFrequent(words, k))
 """
 from collections import Counter
 class Solution(object):
-  def topKFrequent(self, words, k):
+  def topKFrequent1(self, words, k):
         c = Counter(words)
         return [c.most_common(k)[i][0] for i in range(k)]
         
+  def topKFrequent(self, words, k):
+        c = Counter(words) 
+        return sorted(c.keys(), key = lambda x:x[1], reverse=True)[:k]
+
 
 words = ["daily", "interview", "pro", "pro", "for", "daily", "pro", "problems"]
 k = 2
