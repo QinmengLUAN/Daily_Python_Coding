@@ -20,12 +20,8 @@ from collections import Counter
 class Solution(object):
   def topKFrequent(self, words, k):
         c = Counter(words)
-        sorted(c, key=c.get, reverse=True)
-        res = []
-        for i in range(min(k, len(c))):
-            res.append(c[i].items)
-        return res
-
+        return [c.most_common(k)[i][0] for i in range(k)]
+        
 
 words = ["daily", "interview", "pro", "pro", "for", "daily", "pro", "problems"]
 k = 2
