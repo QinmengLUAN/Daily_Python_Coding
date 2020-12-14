@@ -16,7 +16,34 @@ def ip_addresses(s, ip_parts=[]):
 print ip_addresses('1592551013')
 # ['159.255.101.3', '159.255.10.13']
 """
+# First method: recursion, back-tracking
 def ip_addresses(s, ip_parts=[]):
+    helper(s, 0, [], ip_parts)
+    return ip_parts
+
+def helper(s, idx, curr, ip_parts):
+    if len(curr) == 4 and idx == len(s):
+        ip_parts.append('.'.join(curr))
+
+    if idx >= len(s) or len(curr) >=4:
+        return
+
+    if s[idx] == '0':
+        curr.append('0')
+        helper(s, idx+1, curr, ip_parts)
+        curr.pop()
+    else:
+        for next_idx in range(idx+1, idx+4):
+            num = int(s[idx:next_idx])
+            if num > 255:
+                continue
+            curr.append(str(num))
+            helper(s, next_idx, curr, ip_parts)
+            curr.pop()
+
+
+# Second way, for loops to check all possibilities
+def ip_addresses2(s, ip_parts=[]):
     sz = len(s)
     if sz > 12:
         return ip_parts
@@ -29,16 +56,13 @@ def ip_addresses(s, ip_parts=[]):
                 snew = snew[:k] + "." + snew[k:] 
                 snew = snew[:j] + "." + snew[j:] 
                 snew = snew[:i] + "." + snew[i:] 
-                  
+                print(snew)
                 # Check for the validity of combination 
                 if is_valid(snew): 
-                    ip_parts.append(snew) 
-                      
+                    ip_parts.append(snew)                   
                 snew = s 
                   
     return ip_parts 
-
-
 
 def is_valid(ip):
     ip = ip.split(".")
@@ -51,7 +75,6 @@ def is_valid(ip):
         if (len(i) > 1 and int(i) != 0 and i[0] == '0'):
             return False
     return True
-
 
 print(ip_addresses('1592551013'))
 # ['159.255.101.3', '159.255.10.13']
