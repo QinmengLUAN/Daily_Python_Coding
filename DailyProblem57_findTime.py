@@ -16,12 +16,12 @@ print findTime([1, 1, 2, 1], 2)
 import collections
 def findTime(arr, cooldown):
     c = collections.Counter(arr)
-    max_count = max(max(c.values()), len(c))
+    max_count = max(c.values())
     return (max_count-1) * cooldown + max_count
 
 print(findTime([1, 1, 2, 1], 2))
 # 7
 print(findTime([1, 1, 1], 2))
 # 7
-print(findTime([1, 2, 2, 1], 2))
+print(findTime([1, 2, 3], 2))
 # 4
