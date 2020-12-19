@@ -24,4 +24,4 @@ print(findTime([1, 1, 2, 1], 2))
 print(findTime([1, 1, 1], 2))
 # 7
 print(findTime([1, 2, 3], 2))
-# 4
+# 1
