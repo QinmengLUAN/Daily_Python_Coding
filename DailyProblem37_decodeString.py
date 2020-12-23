@@ -32,8 +32,6 @@ def decodeString(s):
             curNum = curNum * 10 + int(st)
         else:
             curString += st
-        print(stack)
-        print(curString)
     return curString
 
 print(decodeString('2[a2[b]c]'))
