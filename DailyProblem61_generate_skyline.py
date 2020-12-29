@@ -24,20 +24,10 @@ print generate_skyline([(2, 8, 3), (4, 6, 5)])
 import heapq
 from heapq import heappush, heappop
 def generate_skyline(buildings):
-    # max_width = 0
-    # for i in range(len(buildings)):
-    #     max_width = max(max_width, buildings[i][1])
-    # nums = [0] * (max_width + 2)
-
-    # for i in range(len(buildings)):
-    #     nums[buildings[i][0]] = buildings[i][-1]
-    #     nums[buildings[i][1]] = buildings[i][-1]
-    # print(nums)
     events = sorted([(L, -H, R) for L, R, H in buildings] + list({(R, 0, None) for _, R, _ in buildings}))
     res, hp = [[0, 0]], [(0, float("inf"))]
     for x, negH, R in events:
         while x >= hp[0][1]:
-            print(hp)
             heapq.heappop(hp)
         if negH: 
             heapq.heappush(hp, (negH, R))
