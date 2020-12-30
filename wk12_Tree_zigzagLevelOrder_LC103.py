@@ -44,28 +44,23 @@ class Solution:
         self.helper(root.right, layer + 1, res)
     
 # Solution 1: BFS
-    def zigzagLevelOrder1(self, root: TreeNode) -> List[List[int]]:
-        deq, res = deque(), []
-        if root != None:
-            deq.append(root)
-            
-        idx_layer = 0
-        while len(deq) > 0:
-            curr_res = []
-            idx_layer += 1
-            for i in range(len(deq)):
-                curr_node = deq.popleft()
-                curr_res.append(curr_node.val)
-                
-                if curr_node.left != None:
-                    deq.append(curr_node.left)
-                if curr_node.right != None:
-                    deq.append(curr_node.right)
-                    
-            if idx_layer % 2 == 1:        
-                res.append(curr_res)
-            else:
-                curr_res.reverse()
-                res.append(curr_res)
-                
+class Solution:
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
+        if not root:
+            return []
+        
+        res, dq,flag = [], deque(), 1
+        dq.append(root)
+        
+        while dq:
+            nx = []
+            for _ in range(len(dq)):
+                curr_node = dq.popleft()
+                nx.append(curr_node.val)
+                if curr_node.left:
+                    dq.append(curr_node.left)
+                if curr_node.right:
+                    dq.append(curr_node.right)
+            res.append(nx[::flag])
+            flag *= -1
         return res
