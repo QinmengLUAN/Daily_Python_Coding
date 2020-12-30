@@ -13,6 +13,36 @@ Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the wh
 """
 class Solution:
     def findUnsortedSubarray(self, nums: List[int]) -> int:
+        n = len(nums)
+        if n < 2:
+            return 0
+        for s in range(n):
+            if s == n-1:
+                return 0
+            elif nums[s] > nums[s+1]:
+                break
+
+        for e in range(n-1, 0, -1):
+            if nums[e] < nums[e-1]:
+                break
+        
+        max_val = max(nums[s:e+1])
+        min_val = min(nums[s:e+1])
+
+        for i in range(s):
+            if nums[i] > min_val:
+                s = i
+                break
+        for i in range(n-1, e, -1):
+            if nums[i] < max_val:
+                e = i
+                break
+
+        return e-s+1
+
+    
+class Solution:
+    def findUnsortedSubarray(self, nums: List[int]) -> int:
         if len(nums) < 2:
             return 0
         l, r = 0, len(nums) - 1
