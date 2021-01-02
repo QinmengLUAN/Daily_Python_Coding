@@ -32,11 +32,8 @@ class Rectangle():
         self.max_y = max_y
 
 def intersection_area(rect1, rect2):
-    # a1 = abs(rec1[0] - rec1[2]) * abs(rec1[1] - rec1[3])
-    # a2 = abs(rec2[0] - rec2[2]) * abs(rec2[1] - rec2[3])
-
-    x_dis = min(rect1[2], rect2[2]) - max(rect1[0], rect2[0])
-    y_dis = min(rect1[3], rect2[3]) - max(rect1[1], rect2[1])
+    x_dis = min(rect1.max_x, rect2.max_x) - max(rect1.min_x, rect2.min_x)
+    y_dis = min(rect1.max_y, rect2.max_y) - max(rect1.min_y, rect2.min_y)
 
     if x_dis > 0 and y_dis > 0:
         return x_dis * y_dis
