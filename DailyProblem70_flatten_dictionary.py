@@ -53,7 +53,8 @@ def helper(dd, nd, pre):
             helper(v, nd, pre)
 
         pre.pop()
-# Method 1: recursion
+
+# Method 2: recursion
 def flatten_dictionary(d):
     for k, v in list(d.items()):
         if isinstance(v, dict):
