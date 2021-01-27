@@ -15,10 +15,9 @@ print(''.join(s))
 # this read you can
 """
 def reverse_words(words):
-    print(words)
     for i in range(len(words)//2):
         tmp = words[i]
-        words = words[-i-1]
+        words[i] = words[-i-1]
         words[-i-1] = tmp
     return words
 
